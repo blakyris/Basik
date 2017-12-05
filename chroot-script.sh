@@ -14,7 +14,7 @@ pacman -Syu --noconfirm --quiet grub \
 echo $HOSTNAME > /etc/hostname
 echo "127.0.1.1 $HOSTNAME.$DOMAIN $HOSTNAME" >> /etc/hosts
 ln -s /usr/share/zoneinfo/Europe/Paris /etc/localtime
-echo $LOCALE > /etc/locale.gen
+sed -i 's/#en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/g' /etc/locale.gen
 locale-gen
 echo LANG="$LANG" > /etc/locale.conf
 export LANG=$LANG
