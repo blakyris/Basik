@@ -33,7 +33,7 @@ genfstab -U -p /mnt >> /mnt/etc/fstab
 mkdir -p /mnt/tmp/
 mkdir -p /mnt/tmp/install-scripts
 cp ./* /mnt/tmp/install-scripts/
-arch-chroot /mnt /tmp/install-scripts/chroot-script.sh
+arch-chroot /mnt /bin/bash -e -x /tmp/install-scripts/chroot-script.sh
 
 rm -rf /mnt/tmp/install-scripts/
 reboot
