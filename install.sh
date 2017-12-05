@@ -30,6 +30,7 @@ pacstrap /mnt base base-devel
 
 genfstab -U -p /mnt >> /mnt/etc/fstab
 
+mkdir -p /mnt/tmp/
 mkdir -p /mnt/tmp/install-scripts
 cp ./* /mnt/tmp/install-scripts/
 arch-chroot /mnt /tmp/install-scripts/chroot-script.sh
