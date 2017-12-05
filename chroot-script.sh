@@ -2,6 +2,15 @@
 
 source ./config.sh
 
+pacman -Syu --noconfirm --quiet grub \
+  efibootmgr \
+  net-tools \
+  unbound dnscrypt \
+  openssh \
+  ppp \
+  emacs-nox
+
+
 echo $HOSTNAME > /etc/hostname
 echo "127.0.1.1 $HOSTNAME.$DOMAIN $HOSTNAME" >> /etc/hosts
 ln -s /usr/share/zoneinfo/Europe/Paris /etc/localtime
