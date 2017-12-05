@@ -1,4 +1,4 @@
-# Basik - A minimal Arch Linux installation script
+# Basik - A minimal Arch Linux Server installation script
 
 ## Installation
 
