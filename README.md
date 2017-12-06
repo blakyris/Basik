@@ -3,7 +3,7 @@
 **NOTE** : 
 You have to be connected to a network to use this script. If you want offline installation support, please let me know by email.
 
-**DISCLAMER : This script erase all data on your main hard drive  ``` /dev/sda ```. Remember to save ALL your data before running this script.
+**DISCLAMER : This script erase all data on your main hard drive  ``` /dev/sda ```. Remember to save ALL data before running this script.
 If you want multiple partition or dual boot support, please let me know by email.**
 _____________________________________________________________________________________________________________
 
