@@ -2,10 +2,11 @@
 
 source ./config.sh
 
+# Install packages you need here...
 pacman -Syu --noconfirm --quiet grub \
   efibootmgr \
   net-tools \
-  unbound dnscrypt \
+  unbound dnscrypt-proxy \
   openssh \
   ppp \
   emacs-nox
@@ -13,7 +14,7 @@ pacman -Syu --noconfirm --quiet grub \
 
 echo $HOSTNAME > /etc/hostname
 echo "127.0.1.1 $HOSTNAME.$DOMAIN $HOSTNAME" >> /etc/hosts
-ln -s /usr/share/zoneinfo/Europe/Paris /etc/localtime
+rm -f /etc/localtime && ln -s /usr/share/zoneinfo/Europe/Paris /etc/localtime
 sed -i 's/#en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/g' /etc/locale.gen
 locale-gen
 echo LANG="$LANG" > /etc/locale.conf
@@ -24,7 +25,6 @@ mkinitcpio -p linux
 grub-install --target=x86_64-efi --efi-directory=/boot/efi/ --bootloader-id=linux
 grub-mkconfig -o /boot/grub/grub.cfg
 passwd
-groupadd users
 groupadd admin
 useradd -g users -m -s /bin/bash $USERNAME
 usermod -aG admin $USERNAME

@@ -7,7 +7,7 @@ timedatectl set-ntp true
 
 wget -q --spider http://google.com
 
-if [ $? -eq 0 ]
+if [ $? -eq 1 ]
 then
   echo "ERROR :: You need to connect to a network to use this script\n"
   exit 1;
