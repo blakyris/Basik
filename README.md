@@ -2,7 +2,7 @@
 
 ## Installation
 
-![#f03c15](Warning ! You need to be connected to a network to execute this script. Maybe in the future, I will add support for offline installation.) `#f03c15`
+**NOTE** : You have to be connected to a network to use this script. If you want offline installation support, please let me know by email.
 
 Boot the official Arch Linux ISO and type the following commands :
 
