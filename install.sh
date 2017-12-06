@@ -2,7 +2,7 @@
 
 source ./config.sh
 
-loadkeys fr-pc
+loadkeys $KEYMAP
 timedatectl set-ntp true
 
 wget -q --spider http://google.com
