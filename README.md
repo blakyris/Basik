@@ -2,9 +2,7 @@
 
 ## Installation
 
-```diff
-- Warning ! You need to be connected to a network to execute this script. Maybe in the future, I will add support for offline installation.
-```
+![alt text](http://clipart-finder.com/data/mini/zeimusu_Warning_notification.png "Alert") Warning ! You need to be connected to a network to execute this script. Maybe in the future, I will add support for offline installation.
 
 Boot the official Arch Linux ISO and type the following commands :
 
