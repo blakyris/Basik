@@ -17,6 +17,8 @@ chmod +x *.sh
 ./install.sh
 ```
 
+You can customize your system configuration before executing the script by editing the ``` config.sh ``` file using the nano text editor : ``` nano config.sh ```.
+
 ## Licence
 
 This project is under the GPLv3 Licence
