@@ -38,9 +38,9 @@ pacstrap /mnt base base-devel
 
 genfstab -U -p /mnt >> /mnt/etc/fstab
 
-cat ./chroot-script.sh > /chroot-script.sh
-cat ./config.sh > /config.sh
-arch-chroot /mnt /bin/bash -e -x /chroot-script.sh
+cp ./chroot-script.sh /mnt/chroot-scripts.sh
+cp ./config.sh /mnt/config.sh
+arch-chroot /mnt /bin/bash /chroot-scripts.sh
 
 rm -rf /mnt/tmp/install-scripts/
 reboot
