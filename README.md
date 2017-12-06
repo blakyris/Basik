@@ -20,7 +20,7 @@ chmod +x *.sh
 ./install.sh
 ```
 
-You can customize your system configuration before executing the script by editing the ``` config.sh ``` file using the nano text editor : ``` nano config.sh ```.
+You can customize your system configuration before executing the script by editing the ``` config.sh ``` file using the nano text editor : ``` nano config.sh ```. See documentation in ``` config.sh ``` for more details.
 
 ## Licence
 
