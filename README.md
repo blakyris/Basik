@@ -1,8 +1,10 @@
 # Basik - A simple Arch Linux installation script
 
+**NOTE** : You have to be connected to a network to use this script. If you want offline installation support, please let me know by email.
+_____________________________________________________________________________________________________________
+
 ## Installation
 
-**NOTE** : You have to be connected to a network to use this script. If you want offline installation support, please let me know by email.
 
 Boot the official Arch Linux ISO and type the following commands :
 
