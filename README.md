@@ -2,8 +2,9 @@
 
 ## Installation
 
-1. Boot the official Arch Linux installation ISO.
-2. Clone this repo using the following command : ''' wget https://github.com/blakyris/Basik/archive/master.zip '''
+![#f03c15] Warning ! You need to be connected to a network to execute this script. Maybe in the future, I will add support for offline installation. `#f03c15`
+
+Boot the official Arch Linux ISO. 
 
 ## Licence
 
