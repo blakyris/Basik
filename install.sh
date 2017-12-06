@@ -9,7 +9,7 @@ wget -q --spider http://google.com
 
 if [ $? -eq 1 ]
 then
-  echo "ERROR :: You need to connect to a network to use this script\n"
+  echo "ERROR :: You need to be connected to a network to use this script\n"
   exit 1;
 fi
 
