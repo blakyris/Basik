@@ -2,7 +2,7 @@
 
 ## Installation
 
-![alt text](http://clipart-finder.com/data/mini/zeimusu_Warning_notification.png "Alert") Warning ! You need to be connected to a network to execute this script. Maybe in the future, I will add support for offline installation.
+![#f03c15](Warning ! You need to be connected to a network to execute this script. Maybe in the future, I will add support for offline installation.) `#f03c15`
 
 Boot the official Arch Linux ISO and type the following commands :
 
