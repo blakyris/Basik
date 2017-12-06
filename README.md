@@ -1,4 +1,4 @@
-# Basik - A simple Arch Linux installation script
+# Basik - A simple Arch Linux installation script for UEFI based systems
 
 **NOTE** : You have to be connected to a network to use this script. If you want offline installation support, please let me know by email.
 _____________________________________________________________________________________________________________
