@@ -25,7 +25,7 @@ echo -e "Would you like to continue ? (Y/n) : "
 read ans
 if [ $ans == "Y" ] || [ $ans == "y" ] || [ $ans == "Yes" ] || [ $ans == "yes" ]
 then
-  echo -e "Starting Basik installation scripts..."
+  echo -e "Running Basik installation scripts..."
   ./install.sh
 else
   echo -e "Aborting..."
