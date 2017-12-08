@@ -11,9 +11,9 @@ then
 fi
 
 echo "Downloading latest installation scripts from GitHub..."
-wget https://github.com/blakyris/Basik/archive/master.zip
+wget -q https://github.com/blakyris/Basik/archive/master.zip
 
-unzip master.zip
+unzip -qq master.zip
 cd Basik-master
 chmod +x *.sh
 
