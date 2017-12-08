@@ -25,7 +25,8 @@ echo -e "Press [ENTER] to continue..."
 read ret
 
 clear
-echo -e "\n/!\ CAUTION !!! DATA LOSS CAN OCCURE. READ CAREFULLY !"
+echo -e ""
+echo -e "/!\ CAUTION !!! DATA LOSS CAN OCCURE. READ CAREFULLY !"
 echo -e "    --------------------------------------------------"
 echo -e "Multiple partitions and dual boot is not supported yet."
 echo -e "This script erase all data on your primary hard drive (/dev/sda) !!"
