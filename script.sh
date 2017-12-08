@@ -6,7 +6,7 @@ pacman --noconfirm --noprogressbar --quiet -Sy unzip
 wget -q --spider http://archlinux.org
 if [ $? -eq 1 ] then
   echo -e 'ERROR :: You need to be connected to a network to use this script\n'
-  exit 1
+  exit 1;
 fi
 
 echo "Downloading latest installation scripts from GitHub..."
@@ -21,11 +21,11 @@ echo -e "******************** WARNING !! **********************\n"
 echo -e "This script erase all data on your primary hard drive."
 echo -e "Would you like to continue ? (Y/n) : "
 read ans
-if [ $ans != "Y" ] || [ $ans != "y" ] || [ $ans != "Yes" ] || [ $ans != "yes" ]
+if [ $ans == "Y" ] || [ $ans == "y" ] || [ $ans == "Yes" ] || [ $ans == "yes" ]
 then
-  echo -e "Aborting..."
-  exit 1
-else
-  echo "Starting Basik installation scripts..."
+  echo -e "Starting Basik installation scripts..."
   ./install.sh
+else
+  echo -e "Aborting..."
+  exit 1;
 fi
