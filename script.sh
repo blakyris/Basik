@@ -1,5 +1,7 @@
 #!/bin/bash
 
+ret=""
+
 echo "Installing required packages..."
 pacman --noconfirm --noprogressbar -Sy unzip
 
@@ -20,10 +22,10 @@ chmod +x *.sh
 clear
 cat ./welcome.txt
 echo -e "Press [ENTER] to continue..."
-read r
+read ret
 
 clear
-echo -e "/!\ CAUTION !!! DATA LOSS CAN OCCURE. READ CAREFULLY !"
+echo -e "\n/!\ CAUTION !!! DATA LOSS CAN OCCURE. READ CAREFULLY !"
 echo -e "    --------------------------------------------------"
 echo -e "Multiple partitions and dual boot is not supported yet."
 echo -e "This script erase all data on your primary hard drive (/dev/sda) !!"
