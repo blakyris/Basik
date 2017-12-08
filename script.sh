@@ -20,7 +20,7 @@ chmod +x *.sh
 clear && clear
 cat ./welcome.txt
 echo -e ""
-echo -e "Press [ENTER] to continue..."
+echo -n "Press [ENTER] to continue..."
 read ret
 
 clear
@@ -35,7 +35,7 @@ read ans
 if [ $ans == "Y" ] || [ $ans == "y" ] || [ $ans == "Yes" ] || [ $ans == "yes" ]
 then
   unset ans
-
+  echo -e ""
   echo -e ""
   echo -e ">> CUSTOMIZE YOUR INSTALLATION"
   echo -e "   ---------------------------"
