@@ -1,7 +1,11 @@
 #!/bin/bash
 
+cat ./welcome.txt
+echo -e "Press [ENTER] to continue..."
+read r
+
 echo "Installing required packages..."
-pacman --noconfirm --noprogressbar --quiet -Sy unzip
+pacman --noconfirm --noprogressbar -Sy unzip
 
 wget -q --spider http://archlinux.org
 if [ $? -eq 1 ];
@@ -10,7 +14,7 @@ then
   exit 1;
 fi
 
-echo "Downloading latest installation scripts from GitHub..."
+echo "... Downloading latest installation scripts from GitHub."
 wget -q https://github.com/blakyris/Basik/archive/master.zip
 
 unzip -qq master.zip
@@ -18,7 +22,8 @@ cd Basik-master
 chmod +x *.sh
 
 clear
-echo -e "******************** WARNING !! **********************\n"
+echo -e "/!\ CAUTION !!! DATA LOSS CAN OCCURE. READ CAREFULLY !"
+echo -e "    --------------------------------------------------"
 echo -e "Multiple partitions and dual boot is not supported yet."
 echo -e "This script erase all data on your primary hard drive (/dev/sda) !!"
 echo -e "Would you like to continue ? (Y/n) : "
@@ -27,8 +32,10 @@ if [ $ans == "Y" ] || [ $ans == "y" ] || [ $ans == "Yes" ] || [ $ans == "yes" ]
 then
   unset ans
 
+  echo -e ">> CUSTOMIZE YOUR INSTALLATION"
+  echo -e "   ---------------------------"
   echo -e "You can customize your system settings before running the scripts"
-  echo -e "Would you like to edit the configuration file ? (Y/n) : "
+  echo -n "Would you like to edit the configuration file ? (Y/n) : "
   read ans
   if [ $ans == "Y" ] || [ $ans == "y" ] || [ $ans == "Yes" ] || [ $ans == "yes" ]
   then
