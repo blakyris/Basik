@@ -28,8 +28,8 @@ then
   unset ans
   echo -e "You can customize your system settings before running the scripts"
   echo -e "Would you like to edit the configuration file ? (Y/n) : "
-  read ans
-  if [ $ans == "Y" ] || [ $ans == "y" ] || [ $ans == "Yes" ] || [ $ans == "yes" ]
+  read ans2
+  if [ $ans2 == "Y" ] || [ $ans2 == "y" ] || [ $ans2 == "Yes" ] || [ $ans2 == "yes" ]
   then
     nano config.sh
   fi
