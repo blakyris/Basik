@@ -18,7 +18,7 @@ cd Basik-master
 chmod +x *.sh
 
 clear
-cat welcome.txt
+cat ./welcome.txt
 echo -e "Press [ENTER] to continue..."
 read r
 
