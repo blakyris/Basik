@@ -19,7 +19,7 @@ unzip -qq master.zip
 cd Basik-master
 chmod +x *.sh
 
-clear
+clear && clear
 cat ./welcome.txt
 echo -e ""
 echo -e "Press [ENTER] to continue..."
