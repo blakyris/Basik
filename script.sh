@@ -21,6 +21,7 @@ chmod +x *.sh
 
 clear
 cat ./welcome.txt
+echo -e ""
 echo -e "Press [ENTER] to continue..."
 read ret
 
