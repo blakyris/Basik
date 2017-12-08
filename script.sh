@@ -1,7 +1,5 @@
 #!/bin/bash
 
-ret=""
-
 echo "Installing required packages..."
 pacman --noconfirm --noprogressbar -Sy unzip
 
@@ -31,6 +29,7 @@ echo -e "/!\ CAUTION !!! DATA LOSS CAN OCCURE. READ CAREFULLY !"
 echo -e "    --------------------------------------------------"
 echo -e "Multiple partitions and dual boot is not supported yet."
 echo -e "This script erase all data on your primary hard drive (/dev/sda) !!"
+echo -e "If you are not sure about what you are doing say no."
 echo -e "Would you like to continue ? (Y/n) : "
 read ans
 if [ $ans == "Y" ] || [ $ans == "y" ] || [ $ans == "Yes" ] || [ $ans == "yes" ]
