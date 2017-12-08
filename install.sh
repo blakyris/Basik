@@ -5,14 +5,6 @@ source ./config.sh
 loadkeys $KEYMAP
 timedatectl set-ntp true
 
-wget -q --spider http://google.com
-
-if [ $? -eq 1 ]
-then
-  echo -e 'ERROR :: You need to be connected to a network to use this script\n'
-  exit 1;
-fi
-
 parted --script /dev/sda mklabel gpt
 cgdisk /dev/sda
 
