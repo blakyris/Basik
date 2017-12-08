@@ -25,7 +25,12 @@ echo -e "Would you like to continue ? (Y/n) : "
 read ans
 if [ $ans == "Y" ] || [ $ans == "y" ] || [ $ans == "Yes" ] || [ $ans == "yes" ]
 then
-  echo -e "Running Basik installation scripts..."
+  echo -e "You can customize your system settings before running the scripts"
+  echo -e "Would you like to edit the configuration file ? (Y/n) : "
+  if [ $ans == "Y" ] || [ $ans == "y" ] || [ $ans == "Yes" ] || [ $ans == "yes" ]
+  then
+    nano config.sh
+  fi
   ./install.sh
 else
   echo -e "Aborting..."
