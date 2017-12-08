@@ -20,7 +20,7 @@ chmod +x *.sh
 clear
 echo -e "******************** WARNING !! **********************\n"
 echo -e "This script erase all data on your primary hard drive."
-echo "Would you like to continue ? (Y/n) : "
+echo 'Would you like to continue ? (Y/n) : '
 read ans
 if [ $ans == "Y" ] || [ $ans == "y" ] || [ $ans == "Yes" ] || [ $ans == "yes" ]
 then
