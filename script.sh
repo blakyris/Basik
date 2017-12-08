@@ -4,7 +4,7 @@ echo "Installing required packages..."
 pacman --noconfirm --noprogressbar --quiet -Sy unzip
 
 wget -q --spider http://archlinux.org
-if [ $? -eq 1 ]; then
+if [ $? -eq 1 ] then
   echo -e 'ERROR :: You need to be connected to a network to use this script\n'
   exit 1;
 fi
