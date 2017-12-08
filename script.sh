@@ -1,9 +1,5 @@
 #!/bin/bash
 
-cat ./welcome.txt
-echo -e "Press [ENTER] to continue..."
-read r
-
 echo "Installing required packages..."
 pacman --noconfirm --noprogressbar -Sy unzip
 
@@ -14,12 +10,17 @@ then
   exit 1;
 fi
 
-echo "... Downloading latest installation scripts from GitHub."
+echo "Downloading latest installation scripts from GitHub."
 wget -q https://github.com/blakyris/Basik/archive/master.zip
 
 unzip -qq master.zip
 cd Basik-master
 chmod +x *.sh
+
+clear
+cat welcome.txt
+echo -e "Press [ENTER] to continue..."
+read r
 
 clear
 echo -e "/!\ CAUTION !!! DATA LOSS CAN OCCURE. READ CAREFULLY !"
