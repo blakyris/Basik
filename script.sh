@@ -30,12 +30,13 @@ echo -e "    --------------------------------------------------"
 echo -e "Multiple partitions and dual boot is not supported yet."
 echo -e "This script erase all data on your primary hard drive (/dev/sda) !!"
 echo -e "If you are not sure about what you are doing say no."
-echo -e "Would you like to continue ? (Y/n) : "
+echo -n "Would you like to continue ? (Y/n) : "
 read ans
 if [ $ans == "Y" ] || [ $ans == "y" ] || [ $ans == "Yes" ] || [ $ans == "yes" ]
 then
   unset ans
 
+  echo -e ""
   echo -e ">> CUSTOMIZE YOUR INSTALLATION"
   echo -e "   ---------------------------"
   echo -e "You can customize your system settings before running the scripts"

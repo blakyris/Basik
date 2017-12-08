@@ -10,7 +10,7 @@ You can customize all your system settings in the "./config.sh" file.
                         !! CAUTION - READ CAREFULLY !!
                         ------------------------------
 
-This script does not include a custom partion scheme installation module. The
+This script does not include a custom partition scheme installation module. The
 entire system will be installed on one LVM partition mounted as :
 --> /dev/mapper/SYSTEM-root
 
