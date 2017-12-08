@@ -21,7 +21,7 @@ echo -e "******************** WARNING !! **********************\n\n"
 echo -e "This script erase all data on your primary hard drive.\n"
 echo -e "Would you like to continue ? (Y/n) : "
 read ans
-if (( ("$ans" != "Y") || ("$ans" != "y") || ("$ans" != "Yes") || ("$ans" != "yes") )); then
+if [ $ans != "Y" || $ans != "y" || $ans != "Yes" || $ans != "yes" ] then
   echo -e "Aborting..."
   exit 1;
 else
