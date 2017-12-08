@@ -6,7 +6,9 @@ distrubution easely without braking it's phylosophy.
 You can customize all your system settings in the "./config.sh" file.
 
 
------------------------------  !! CAUTION !!  ---------------------------------
+                        ------------------------------
+                        !! CAUTION - READ CAREFULLY !!
+                        ------------------------------
 
 This script does not include a custom partion scheme installation module. The
 entire system will be installed on one LVM partition mounted as :
@@ -14,13 +16,11 @@ entire system will be installed on one LVM partition mounted as :
 
 -------------------------------------------------------------------------------
 
-
 Author : Sebastien Mercier ( Blakyris @ GitHub.com )
+Licence : GNU GPLv3 Licence
 Version : 1.0
 Date : 12-5-2017
 
+--------------------------------------------------------------------------------
+
 All contributions are welcome, for security and features improvement.
-
-CHANGELOG :
-
---> v1.0 : First version, a simple and straight forward installation.

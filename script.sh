@@ -48,6 +48,6 @@ then
 
   ./install.sh
 else
-  echo -e "Aborting..."
+  echo -e "Aborted."
   exit 1;
 fi
