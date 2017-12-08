@@ -12,12 +12,7 @@ You have to be connected to a network to use this script. If you want offline in
 Boot the official Arch Linux ISO and type the following commands :
 
 ```
-pacman -Sy unzip
-wget https://github.com/blakyris/Basik/archive/master.zip
-unzip master.zip
-cd Basik-master
-chmod +x *.sh
-./install.sh
+bash <(curl -Ss https://raw.githubusercontent.com/blakyris/Basik/master/script.sh)
 ```
 
 You can customize your system configuration before executing the script by editing the ``` config.sh ``` file using the nano text editor : ``` nano config.sh ```.
