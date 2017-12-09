@@ -35,10 +35,8 @@ pacstrap /mnt base base-devel
 genfstab -U -p /mnt >> /mnt/etc/fstab
 
 mkdir -p /usr/bin/basik/
-cp ./chroot-script.sh /mnt/usr/bin/basik/chroot-scripts.sh
-cp ./config.sh /mnt/usr/bin/basik/config.sh
-cp ./custom-scripts.sh /mnt/usr/bin/basik/custom-scripts-scripts.sh
-arch-chroot /mnt /bin/bash /chroot-scripts.sh
+cp * /mnt/usr/bin/basik/
+arch-chroot /mnt /bin/bash /usr/bin/basik/chroot-scripts.sh
 
 mkdir -rf /usr/bin/basik/
 
