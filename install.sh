@@ -6,7 +6,10 @@ loadkeys $KEYMAP
 timedatectl set-ntp true
 
 parted --script /dev/sda mklabel gpt
-cgdisk /dev/sda
+parted --script /dev/sda mkpart ESP fat32 0% 1024MiB
+parted --script /dev/sda set 1 boot on
+parted --script /dev/sda mkpart primary ext4 1024MiB 100%
+parted --script /dev/sda set 2 lvm on
 
 modprobe dm_mod
 pvcreate /dev/sda2
