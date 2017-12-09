@@ -5,6 +5,7 @@ source ./config.sh
 loadkeys $KEYMAP
 timedatectl set-ntp true
 
+wipefs --force --all /dev/sda
 parted --script /dev/sda mklabel gpt
 parted --script /dev/sda mkpart ESP fat32 0% 1024MiB
 parted --script /dev/sda set 1 boot on
