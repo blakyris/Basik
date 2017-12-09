@@ -1,9 +1,29 @@
-BASIK - A simple Arch Linux installation
------------------------------------------
+                                       ##
+                                      ####
+                                     ######
+                                    ########
+                                   ##########
+                                  ############
+                                 ##############
+                                ################
+                               ##################
+                              ####################
+                             ######################
+                            #########      #########
+                           ##########      ##########
+                          ###########      ###########
+                         ##########          ##########
+                        #######                  #######
+                       ####                          ####
+                      ###                              ###
+
+                BASIK - A simple Arch Linux installation script.
+                ================================================
 
 This Arch Linux script is made for people who wants to install this
-distrubution easely without braking it's phylosophy.
-You can customize all your system settings in the "./config.sh" file.
+distribution easely without braking it's phylosophy.
+You can customize the installation and all your system settings
+in the "./config.sh" file.
 
 
                         ------------------------------
@@ -21,6 +41,6 @@ Licence : GNU GPLv3 Licence
 Version : 1.0
 Date : 12-5-2017
 
---------------------------------------------------------------------------------
+
 
 All contributions are welcome, for security and features improvement.
