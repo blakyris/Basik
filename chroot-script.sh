@@ -6,11 +6,7 @@ source ./config.sh
 pacman -Syu --noconfirm --quiet grub \
   efibootmgr \
   net-tools \
-  unbound dnscrypt-proxy \
-  openssh \
-  ppp \
   emacs-nox
-
 
 echo $HOSTNAME > /etc/hostname
 echo "127.0.1.1 $HOSTNAME.$DOMAIN $HOSTNAME" >> /etc/hosts
@@ -29,4 +25,9 @@ groupadd admin
 useradd -g users -m -s /bin/bash $USERNAME
 usermod -aG admin $USERNAME
 passwd $USERNAME
+
+# Templates & Custom Scripts
+
+source ./custom-scripts.sh
+
 exit
