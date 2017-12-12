@@ -6,9 +6,10 @@ ________________________________________________________________________________
 
 ## Installation
 
-**NOTE** : 
- - You have to be connected to a network to use this script. If you want offline installation support, please let me know by email.
-- You can customize your system configuration before executing the script by editing the ``` config.sh ``` file using the nano text editor : ``` nano config.sh ```.
+> **NOTE** : 
+> - You have to be connected to a network to use this script. If you want offline installation support, please let me know by email.
+> - You can customize your system configuration before executing the script by editing the ``` config.sh ``` file using the nano text editor : ``` nano config.sh ```.
+
 
 1. Boot the official Arch Linux ISO.
 2. Get your machine IP address using the ``` ifconfig ``` command.
