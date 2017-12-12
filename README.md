@@ -7,15 +7,16 @@ ________________________________________________________________________________
 ## Installation
 
 **NOTE** : 
-You have to be connected to a network to use this script. If you want offline installation support, please let me know by email.
+ - You have to be connected to a network to use this script. If you want offline installation support, please let me know by email.
+- You can customize your system configuration before executing the script by editing the ``` config.sh ``` file using the nano text editor : ``` nano config.sh ```.
 
-Boot the official Arch Linux ISO and type the following commands :
+1. Boot the official Arch Linux ISO.
+2. Get your machine IP address using the ``` ifconfig ``` command.
+3. Connect via SSH and type the following command :
 
 ```
 bash <(curl -Ss https://raw.githubusercontent.com/blakyris/Basik/master/script.sh)
 ```
-
-You can customize your system configuration before executing the script by editing the ``` config.sh ``` file using the nano text editor : ``` nano config.sh ```.
 
 ## Licence
 
