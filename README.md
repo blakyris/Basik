@@ -12,7 +12,7 @@ ________________________________________________________________________________
 
 
 1. Boot the official Arch Linux ISO.
-2. Get your machine IP address using the ``` ip address show ``` command. If you are using Wi-Fi connection type ``` wifi-menu ``` to get a GUI connection tool.
+2. Get your machine IP address using the ``` ip address show ``` command. If you are using Wi-Fi connection, type ``` wifi-menu ``` to get a GUI connection tool.
 3. Start the SSH deamon : ``` systemctl start sshd ``` 
 3. Connect via SSH and type the following command :
 
