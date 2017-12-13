@@ -13,6 +13,7 @@ ________________________________________________________________________________
 
 1. Boot the official Arch Linux ISO.
 2. Get your machine IP address using the ``` ifconfig ``` command.
+3. Start the SSH deamon : ``` systemctl start sshd ``` 
 3. Connect via SSH and type the following command :
 
 ```
