@@ -4,7 +4,7 @@ source ./config.sh
 
 echo "Installing GNOME Desktop..."
 
-pacman -Sy xorg \
+pacman --noconfirm --noprogressbar -Sy xorg \
   xorg-server-utils \
   gnome \
   gnome-software \
@@ -12,4 +12,4 @@ pacman -Sy xorg \
   gnome-builder \
   firefox
 
-pacman -Rs epiphany empathy
+pacman --noconfirm --noprogressbar -Rs epiphany empathy
