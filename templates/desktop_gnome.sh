@@ -12,4 +12,5 @@ pacman --noconfirm --noprogressbar -Sy xorg \
   gnome-builder \
   firefox
 
-pacman --noconfirm --noprogressbar -Rs epiphany empathy
+systemctl enable gdm
+systemctl enable NetworkManager
