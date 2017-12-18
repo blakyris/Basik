@@ -27,7 +27,27 @@ usermod -aG admin $USERNAME
 passwd $USERNAME
 
 # Templates & Custom Scripts
+#
+# Edit "./config.sh" and choose a template or add your scripts directly
+# in the custom scripts folder : "./custom-scripts/".
 
-source ./custom-scripts.sh
+# Desktop template
+if [ $TEMPLATE == "DESKTOP_GNOME" ]
+then
+  source ./templates/desktop_gnome.sh
+elif [ $TEMPLATE == "DESKTOP_PLASMA" ]
+then
+  source ./templates/desktop_plasma.sh
+elif [ $TEMPLATE == "SERVER_WEB" ]
+then
+  source ./templates/server_web.sh
+elif [ $TEMPLATE == "SERVER_VIRT" ]
+then
+  source ./templates/server_virt.sh
+else
+  echo "No template wiil be installed."
+fi
+d
+source ./custom-scripts/main.sh
 
 exit

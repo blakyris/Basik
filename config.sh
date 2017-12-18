@@ -16,6 +16,11 @@ USERNAME="user"
 
 # SCRIPT VARIABLES
 
+# Installation template :
+#
+# Desktop templates : DESKTOP_GNOME, DESKTOP_PLASMA
+# Server templates : SERVER_WEB, SERVER_VIRT
 
+TEMPLATE=""
 
 # ----------------------------------------------------
