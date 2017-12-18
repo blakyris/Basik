@@ -49,6 +49,7 @@ passwd
 groupadd admin
 useradd -g users -m -s /bin/bash $USERNAME
 usermod -aG admin $USERNAME
+
 echo -e ""
 echo -e ""
 echo -e ">>  MAIN USER PASSWORD"
