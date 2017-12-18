@@ -47,7 +47,7 @@ then
 else
   echo "No template wiil be installed."
 fi
-d
+
 source ./custom-scripts/main.sh
 
 exit
