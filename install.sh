@@ -36,7 +36,7 @@ genfstab -U -p /mnt >> /mnt/etc/fstab
 
 mkdir -p /mnt/usr/bin/basik/
 cp -r * /mnt/usr/bin/basik/
-arch-chroot /mnt /bin/bash /usr/bin/basik/chroot-scripts.sh
+arch-chroot /mnt /bin/bash /usr/bin/basik/chroot-script.sh
 
 rmdir -rf /mnt/usr/bin/basik/
 
