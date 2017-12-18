@@ -21,6 +21,6 @@ USERNAME="user"
 # Desktop templates : DESKTOP_GNOME, DESKTOP_PLASMA
 # Server templates : SERVER_WEB, SERVER_VIRT
 
-TEMPLATE=""
+TEMPLATE="DESKTOP_GNOME"
 
 # ----------------------------------------------------
