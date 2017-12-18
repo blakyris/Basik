@@ -32,16 +32,16 @@ passwd $USERNAME
 # in the custom scripts folder : "./custom-scripts/".
 
 # Desktop template
-if [ $TEMPLATE = "DESKTOP_GNOME" ]
+if [ $TEMPLATE="DESKTOP_GNOME" ]
 then
   source ./templates/desktop_gnome.sh
-elif [ $TEMPLATE = "DESKTOP_PLASMA" ]
+elif [ $TEMPLATE="DESKTOP_PLASMA" ]
 then
   source ./templates/desktop_plasma.sh
-elif [ $TEMPLATE = "SERVER_WEB" ]
+elif [ $TEMPLATE="SERVER_WEB" ]
 then
   source ./templates/server_web.sh
-elif [ $TEMPLATE = "SERVER_VIRT" ]
+elif [ $TEMPLATE="SERVER_VIRT" ]
 then
   source ./templates/server_virt.sh
 else
