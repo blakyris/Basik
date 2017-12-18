@@ -35,9 +35,9 @@ pacstrap /mnt base base-devel
 genfstab -U -p /mnt >> /mnt/etc/fstab
 
 mkdir -p /mnt/usr/bin/basik/
-cp * /mnt/usr/bin/basik/
+cp -r * /mnt/usr/bin/basik/
 arch-chroot /mnt /bin/bash /usr/bin/basik/chroot-scripts.sh
 
-mkdir -rf /mnt/usr/bin/basik/
+rmdir -rf /mnt/usr/bin/basik/
 
 reboot
