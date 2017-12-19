@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source ./config.sh
+source /bin/basik/config.sh
 
 # Install packages you need here...
 pacman -Syu --noconfirm --quiet grub \

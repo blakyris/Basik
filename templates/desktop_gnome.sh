@@ -1,7 +1,5 @@
 #!/bin/bash
 
-source ./config.sh
-
 echo "Installing GNOME Desktop..."
 
 pacman --noconfirm --noprogressbar -Sy xorg \
