@@ -25,11 +25,11 @@
 This Arch Linux script is made for people who wants to install this
 distribution easely without braking it's phylosophy.
 You can customize the installation using your own scripts and all your
-system settings in the "./config.sh" file and "./custom-scripts.sh".
+system settings in the "./config.sh" file and "custom-scripts" folder.
 
 All contributions are welcome, for security and features improvement.
 
-_________________________________________________________________________________
+________________________________________________________________________________
 
                         ------------------------------
                         !! CAUTION - READ CAREFULLY !!

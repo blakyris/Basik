@@ -1,9 +1,10 @@
 #!/bin/bash
 
-source /bin/basik/config.sh
+SRC=/bin/basik
+source $SRC/config.sh
 
 # Install packages you need here...
-pacman -Syu --noconfirm --quiet grub \
+pacman -Syu --noconfirm --no-progressbar grub \
   efibootmgr \
   net-tools \
   emacs-nox
@@ -17,14 +18,60 @@ echo LANG="$LANG" > /etc/locale.conf
 export LANG=$LANG
 echo KEYMAP="$KEYMAP" > /etc/vconsole.conf
 
+# Graphic card detection
+if lspci -vnn | grep "VGA" -A 12 | grep -q "NVIDIA"; then
+
+  echo -e ""
+  echo -e ">>  INSTALL NVIDIA PROPRIETARY DRIVER"
+  echo -e "    ---------------------------------"
+  echo -e ""
+  echo -e "A NVIDIA GeForce card was detected."
+  echo -e "I recommend that you install the proprietary driver for best"
+  echo -e "performance. If you use a laptop with hybrid graphics, read more"
+  echo -e "about NVIDIA Optimus™ on the ArchWiki."
+  echo -n "Would you like to install the proprietary driver ? (Y/n) : "
+  read ans
+  if [ $ans == "Y" ] || [ $ans == "y" ] || [ $ans == "Yes" ] || [ $ans == "yes" ]
+  then
+    unset $ans
+    pacman --noconfirm --no-progressbar -S nvidia nvidia-utils
+  fi
+
+elif lspci -vnn | grep "VGA" -A 12 | grep -q "Radeon"; then
+
+  echo -e ""
+  echo -e ">>  INSTALL AMDGPU OPEN SOURCE DRIVER"
+  echo -e "    ---------------------------------"
+  echo -e ""
+  echo -e "A AMD Radeon GPU was detected."
+  echo -e "I recommend that you install the open source driver for best"
+  echo -e "performance. (\"radeon\" kernel module will be blacklisted.)"
+  echo -e "NOTE : Don't forget to add \"amdgpu\" module in \"mkinitcpio.conf\" !"
+  echo -e ""
+  echo -n "Would you like to install the amdgpu driver ? (Y/n) : "
+  read ans
+  if [ $ans == "Y" ] || [ $ans == "y" ] || [ $ans == "Yes" ] || [ $ans == "yes" ]
+  then
+    unset $ans
+    touch /etc/modprobe.d/blacklist.conf
+    echo "blacklist radeon" >> /etc/modprobe.d/blacklist.conf
+    pacman --noconfirm --no-progressbar -S mesa amdgpu
+  fi
+
+else
+
+    echo -e "No dedicated GPU found !! Skipping."
+
+fi
+
 clear
 echo -e ""
 echo -e ">>  EDIT MKINITCPIO.CONF"
 echo -e "    --------------------"
 echo -e ""
 echo -e "You will now be able to edit mkinitcpio.conf in order to add \"lvm2\""
-echo -e "before \"filesystem\" in the HOOKS section. (this will be automatic"
-echo -e "in the future)."
+echo -e "before \"filesystem\" in the HOOKS section or add the \"amdgpu\""
+echo -e "module. (this will be automatic in the future)."
 echo -e ""
 echo -n "Press [ENTER] to continue..."
 read ret
@@ -55,7 +102,7 @@ echo -e ""
 echo -e ">>  MAIN USER PASSWORD"
 echo -e "    ------------------"
 echo -e ""
-echo -e "You will now choose your main user password ( $USERNAME )"
+echo -e "You will now choose the password for user \"$USERNAME\""
 echo -e "Make sure it is VERY strong for your security !"
 echo -e ""
 echo -n "Press [ENTER] to continue..."

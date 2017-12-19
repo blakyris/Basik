@@ -1,5 +1,8 @@
 #!/bin/bash
 
+SRC=/bin/basik
+source $SRC/config.sh
+
 echo "Installing GNOME Desktop..."
 
 pacman --noconfirm --noprogressbar -Sy xorg \
