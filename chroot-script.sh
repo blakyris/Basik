@@ -55,7 +55,7 @@ elif lspci -vnn | grep "VGA" -A 12 | grep -q "Radeon"; then
     unset $ans
     touch /etc/modprobe.d/blacklist.conf
     echo "blacklist radeon" >> /etc/modprobe.d/blacklist.conf
-    pacman --noconfirm --no-progressbar -S mesa amdgpu
+    pacman --noconfirm --no-progressbar -S mesa xf86-video-amdgpu
   fi
 
 else
