@@ -13,8 +13,9 @@ ________________________________________________________________________________
 
 1. Boot the official Arch Linux ISO.
 2. Get your machine IP address using the ``` ip address show ``` command. If you are using Wi-Fi connection, type ``` wifi-menu ``` to get a GUI connection tool.
-3. Start the SSH deamon : ``` systemctl start sshd ``` 
-3. Connect via SSH and type the following command :
+3. Change root password : ``` passwd ``` 
+4. Start the SSH deamon : ``` systemctl start sshd ``` 
+5. Connect via SSH and type the following command :
 
 ```
 bash <(curl -Ss https://raw.githubusercontent.com/blakyris/Basik/master/script.sh)
