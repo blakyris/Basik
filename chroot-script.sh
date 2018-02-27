@@ -75,7 +75,7 @@ echo -e "module. (this will be automatic in the future)."
 echo -e ""
 echo -n "Press [ENTER] to continue..."
 read ret
-emacs /etc/mkinitcpio.conf
+nano /etc/mkinitcpio.conf
 mkinitcpio -p linux
 grub-install --target=x86_64-efi --efi-directory=/boot/efi/ --bootloader-id=linux
 grub-mkconfig -o /boot/grub/grub.cfg
