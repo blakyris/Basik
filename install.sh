@@ -27,9 +27,6 @@ mkdir -p /mnt/boot/
 mkdir -p /mnt/boot/efi && mount -t vfat /dev/sda1 /mnt/boot/efi
 mkdir -p /mnt/boot/efi/EFI
 
-cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.backup
-sed -s 's/^#Server/Server/' /etc/pacman.d/mirrorlist.backup
-rankmirrors -n 10 /etc/pacman.d/mirrorlist.backup > /etc/pacman.d/mirrorlist
 pacstrap /mnt base base-devel
 
 genfstab -U -p /mnt >> /mnt/etc/fstab
