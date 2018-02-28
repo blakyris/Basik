@@ -1,5 +1,10 @@
 #!/bin/bash
 
+echo "Ranking pacman mirrors..."
+cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.backup
+sed -s 's/^#Server/Server/' /etc/pacman.d/mirrorlist.backup
+rankmirrors -n 10 /etc/pacman.d/mirrorlist.backup > /etc/pacman.d/mirrorlist
+
 echo "Installing required packages..."
 pacman --noconfirm --noprogressbar -Sy unzip
 
