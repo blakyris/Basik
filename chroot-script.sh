@@ -132,6 +132,6 @@ else
   echo "No template wiil be installed."
 fi
 
-source ./custom-scripts/main.sh
+source $SRC/custom-scripts/main.sh
 
 exit
