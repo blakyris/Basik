@@ -27,7 +27,7 @@ mkdir -p /mnt/boot/
 mkdir -p /mnt/boot/efi && mount -t vfat /dev/sda1 /mnt/boot/efi
 mkdir -p /mnt/boot/efi/EFI
 
-pacstrap /mnt base base-devel
+pacstrap /mnt base base-devel efibootmgr grub
 
 genfstab -U -p /mnt >> /mnt/etc/fstab
 
