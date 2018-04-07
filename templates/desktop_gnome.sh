@@ -5,10 +5,7 @@ source $SRC/config.sh
 
 echo "Installing GNOME Desktop..."
 
-pacman --noconfirm --noprogressbar -Sy xorg \
-  xorg-server-utils \
-  gnome \
-  gnome-software \
+pacman --noconfirm --noprogressbar -Sy gnome \
   gnome-tweak-tool \
   gnome-builder \
   firefox
