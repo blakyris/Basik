@@ -118,16 +118,16 @@ passwd $USERNAME
 # Desktop template
 if [ $TEMPLATE="DESKTOP_GNOME" ]
 then
-  source ./templates/desktop_gnome.sh
+  source $SRC/templates/desktop_gnome.sh
 elif [ $TEMPLATE="DESKTOP_PLASMA" ]
 then
-  source ./templates/desktop_plasma.sh
+  source $SRC/templates/desktop_plasma.sh
 elif [ $TEMPLATE="SERVER_WEB" ]
 then
-  source ./templates/server_web.sh
+  source $SRC/templates/server_web.sh
 elif [ $TEMPLATE="SERVER_VIRT" ]
 then
-  source ./templates/server_virt.sh
+  source $SRC/templates/server_virt.sh
 else
   echo "No template wiil be installed."
 fi
