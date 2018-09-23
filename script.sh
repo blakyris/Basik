@@ -1,6 +1,7 @@
 #!/bin/bash
 
 echo "Ranking pacman mirrors..."
+pacman --noconfirm --noprogressbar -Sy pacman-contrib
 cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.backup
 sed -s 's/^#Server/Server/' /etc/pacman.d/mirrorlist.backup
 rankmirrors -n 10 /etc/pacman.d/mirrorlist.backup > /etc/pacman.d/mirrorlist
